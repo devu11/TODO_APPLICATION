@@ -1,13 +1,214 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Monoton:wght@200;300;400;500;600;700;800&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  /* background: #a3aeb5; */
+  background-image: url("../public/images//bg\ img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container {
+  width: 400px;
+  background: #282851;
+  padding: 1rem;
+  margin: 3rem auto;
+  border-radius: 5px;
+}
+.container h1 {
+  text-align: center;
+  font-family: "Monoton";
+  color: rgb(161, 160, 160);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  padding: 2.4rem 0;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inputField {
+  width: 75%;
+  padding: 5px 1rem;
+  background: #3e3e5a;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inputField input {
+  background: transparent;
+  padding: 10px;
+  color: rgb(161, 160, 160);
+  font-size: 1rem;
+}
+.inputField input::placeholder {
+  color: rgb(161, 160, 160);
+}
+.inputField button {
+  background: #3d79b1;
+  color: #fff;
+  font-size: 2rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+button:hover {
+  transform: rotate(90deg);
+}
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.filter-button {
+  background: #3d79b1;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.filter-options {
+  display: none;
+  position: absolute;
+  background-color: #282851;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.filter-options button {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background: #282851;
+  border: none;
+  width: 100%;
+}
+.filter-button:hover {
+  transform: none;
+}
+.filter-options button:hover {
+  background-color: #3d79b1;
+  transform: none;
+}
+.filter-dropdown:hover .filter-options {
+  display: block;
+}
+/* to do list style */
+.toDoList {
+  margin-top: 2rem;
+}
+.toDoList span {
+  color: rgb(161, 160, 160);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+.toDoList .list-items {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.list-items .items {
+  background: #44446b;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(186, 186, 186);
+}
+input[type="checkbox"] {
+  padding: 5px;
+  cursor: pointer;
+}
+.items-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.items-text div {
+  overflow: hidden;
+}
+.notify {
+  text-align: center;
+  color: rgb(161, 160, 160);
+}
+.delete-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 27px !important;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  display: block;
+}
+.delete-icon:hover {
+  background: #3d79b1;
+  transition: 0.3s;
+}
+.button-group {
+  display: flex;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.edit-icon {
+  margin-right: 5px;
+  transform: none;
+}
+
+.delete-icon {
+  margin-left: 5px;
+  transform: none;
+}
+
+.button-group button {
+  transition: transform 0.3s;
+}
+
+.button-group button:hover {
+  transform: rotate(0deg);
+}
+
+.delete-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 27px !important;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+  display: block;
+}
+
+.delete-icon:hover {
+  background: #3d79b1;
+  transition: 0.3s;
+}
+
+.isChecked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.swal2-confirm {
+  transform: none !important;
 }
